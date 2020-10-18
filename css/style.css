@@ -91,6 +91,18 @@ h2.title-category>a{
   text-align: center;
   transition: .5s all;
 }
+@media(max-width: 767px){
+  h4{
+    font-size: 18px;
+  }
+  .breadcumb h4{
+    text-align: center;
+  }
+  .btn-category{
+    font-size: 15px;
+    min-width: 100px;
+  }
+}
 .btn-category:hover{
   background-color: #994B4A;
   color: #fff;
@@ -166,19 +178,19 @@ h2.title-category>a{
 }
 @media(max-width: 767px){
   .owl-prev, .owl-next {
-     width: 25px!important;
-    height: 50px!important;
-  }
+   width: 25px!important;
+   height: 50px!important;
+ }
 }
 .owl-prev {
  left: 0; 
  border-bottom-right-radius: 80px!important;
-  border-top-right-radius: 80px!important;
+ border-top-right-radius: 80px!important;
 }
 .owl-next {
  right: 0; 
-  border-bottom-left-radius: 80px!important;
-  border-top-left-radius: 80px!important;
+ border-bottom-left-radius: 80px!important;
+ border-top-left-radius: 80px!important;
 }
 .owl-prev i, .owl-next i {transform : scale(2,5); color: #ccc;}
 /* css owl-nav */
@@ -351,7 +363,7 @@ h2.title-category>a{
 
 /* Phần mẫu phòng tắm */
 #bathroom .owl-bathroom {
-    background-color: #F1F2F3;
+  background-color: #F1F2F3;
 }
 #bathroom .owl-bathroom .thumbnail{
 	border: 25px solid #F1F2F3;
@@ -383,6 +395,7 @@ h2.title-category>a{
 #news .list-news{
 	max-height: 315px;
 	overflow-y: scroll;
+  overflow-x: hidden;
 }
 #news .list-news .media{
 	padding: 10px;
@@ -453,22 +466,22 @@ h2.title-category>a{
 #footer .list-policy ul>li>a{
   text-decoration: none;
   color: #fff;
-   transition: .5s all;
+  transition: .5s all;
 }
 #footer .list-policy ul>li>a:hover{
   padding-left: 5px;
 }
 #footer .list-policy ul>li>a:hover::after {
-    width: 100px;
-    transition: width .5s;
+  width: 100px;
+  transition: width .5s;
 }
 #footer .list-policy ul>li>a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #FB203A;
-    transition: width .3s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #FB203A;
+  transition: width .3s;
 }
 #footer .submit{
   background-color: #ED202C;
@@ -485,7 +498,7 @@ h2.title-category>a{
   background-color: #fff;
 }
 #footer .list-social>li:hover>a{
-    color: #652A29;
+  color: #652A29;
 }
 @media(max-width: 1199px){
   #footer .form-inline .form-control{
@@ -513,13 +526,115 @@ h2.title-category>a{
   #footer .box-pay{
     justify-content: center;
   }
-   #footer .list-social{
+  #footer .list-social{
     justify-content: center;
   }
 }
 /* Phần footer */
 
-/* css product detail */
+/* css cong nghe */
+
+@media(max-width: 767px){
+  #cong-nghe .reverse>.col-md-6:first-child{
+    order: 12;
+  }
+  #cong-nghe .reverse>.col-md-6:last-child{
+    order: 1;
+  }
+  #cong-nghe .row>.col-md-6 .content{
+    padding-left: 1.5rem;
+  }
+}
+/* css cong nghe */
+
+/* css trang sản phẩm */
+#san-pham .category{
+  margin: 50px 0;
+}
+@media(max-width: 767px){
+  #san-pham .category{
+    margin: 30px 0;
+  }
+}
+.product-tab .btn-tab{
+  display: block;
+  margin: 0 auto;
+  border-color: #000;
+  border-radius: 0;
+  transition: .5s all;
+  margin-bottom: 30px;
+}
+.product-tab .btn-tab:hover{
+  background-color: #652A29;
+  color: #fff;
+}
+@media(max-width: 767px){
+ .product-tab .btn-tab{
+  width: 50%;
+  margin-bottom: 10px;
+  }
+}
+.box-category .row .col-xs-12{
+  margin-top: 30px;
+}
+@media(max-width: 767px){
+ .box-category .row .col-xs-12{
+  margin-top: 15px;
+  }
+  .box-category>h4{
+    text-align: center;
+  }
+}
+.product{
+  position: relative;
+  overflow: hidden;
+}
+.product:hover{
+  cursor: pointer;
+}
+.product img{
+   transition: .5s all;
+}
+.product:hover img{
+  transform: rotateY(180deg);
+}
+.product .badge{
+  position: absolute;
+    top: 3%;
+    right: 2%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product>img{
+  width: 100%;
+  height: auto;
+}
+.product a{
+  text-decoration: none;
+}
+.product .product-name:hover{
+  color: #652A29;
+}
+.product .sale-price{
+  color: #ED202C!important;
+  font-weight: bold;
+  font-size: 16px;
+}
+.product .describle p{
+  margin-bottom: 0;
+  color: #000;
+}
+.product .describle sup{
+  text-decoration: underline;
+}
+/* css trang sản phẩm */
+
+
+/* css sản phẩm chi tiết */
+
 /*panel*/
 .panel {
   border: none;
@@ -540,7 +655,15 @@ h2.title-category>a{
   margin-top: 0;
   font-family: 'Open Sans', sans-serif;
 }
-
+.panel-body .type{
+  text-decoration: none;
+  color: #000;
+  transition: .5s all;
+}
+.panel-body .type:hover{
+  color: #8E544D;
+  padding-left: 5px;
+}
 /*product list*/
 
 .prod-cat li a{
@@ -606,13 +729,45 @@ h2.title-category>a{
   font-size: 25px;
   line-height: 42px;
 }
-
+.qty-plus-minus .form-control {
+    width: 45px;
+    text-align: center;
+    color: #232d2a;
+    border: 1px solid #ebebeb;
+    box-shadow: none;
+}
+.btnminus {
+    border-radius: 0px 0 0 0px !important;
+    border-right: 0;
+    line-height: 22px;
+}
+.btnplus {
+    border-radius: 0 0px 0px 0 !important;
+    border-left: 0;
+    line-height: 22px;
+}
+.btnminus:hover,
+.btnplus:hover{
+  background-color: #e9ecef;
+}
+.glyphicon-minus:before {
+    content: "\2212";
+}
+.glyphicon-plus:before {
+    content: "\2b";
+}
+#input-quantity {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+}
 .pro-title {
   color: #5A5A5A;
   display: inline-block;
   margin-top: 20px;
   font-size: 16px;
 }
+
 
 .product-list .price {
   color:#fc5959 ;
@@ -633,27 +788,31 @@ h2.title-category>a{
 }
 
 .product_meta {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   padding: 10px 0;
   margin: 15px 0;
 }
-
+.product_price {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  color: #C6C6C5;
+}
+.product_price sup{
+  text-decoration: underline;
+}
 .product_meta span {
   display: block;
   margin-bottom: 10px;
 }
 .product_meta a, .pro-price{
-  color:#fc5959 ;
+  color:#8E544D ;
+  font-size: 25px!important;
+  font-weight: bold;
 }
 
 .pro-price, .amount-old {
   font-size: 18px;
   padding: 0 10px;
-}
-
-.amount-old {
-  text-decoration: line-through;
 }
 
 .quantity {
@@ -664,6 +823,7 @@ h2.title-category>a{
   margin: 10px 0 0 -15px;
   width: 100%;
   display: flex;
+  align-items: center;
 }
 
 .pro-img-list a {
@@ -676,7 +836,7 @@ h2.title-category>a{
   font-size: 18px;
   font-weight: 300;
 }
-/* css product detail */
+/* css sản phẩm chi tiết */
 
 /* stickly social */
 

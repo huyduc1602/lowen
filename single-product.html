@@ -15,6 +15,9 @@
 	<!-- slick slider -->
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<!-- cloudzoom css -->
+	<link rel="stylesheet" type="text/css" href="plugins/cloudzoom/css/jquery.fancybox.css"/>
+	<link rel="stylesheet" type="text/css" href="plugins/cloudzoom/css/cloudzoom.css"/>
 	<!-- hover css -->
 	<link rel="stylesheet" type="text/css" href="css/hover.css"/>
 	<!-- custom css -->
@@ -94,7 +97,7 @@
 		<section id="product-detail">
 			<div class="container">
 				<div class="breadcumb">
-					<h4 class="color-lowen font-weight-bold">TRANG CHỦ - SẢN PHẨM -BỒN CẦU - BỒN CẦU LOWEN 1 KHỐI LW - 801.1U</h4>
+					<h4 class="color-lowen font-weight-bold">TRANG CHỦ - SẢN PHẨM - BỒN CẦU - BỒN CẦU LOWEN 1 KHỐI LW - 801.1U</h4>
 					<div class="underline"></div>
 				</div>
 				<div class="box-product-detail mt-3">
@@ -105,40 +108,62 @@
 									<div class="panel-body row">
 										<div class="col-md-6 col-xs-12">
 											<div class="pro-img-details">
-												<img src="images/boncau01.jpg" alt="">
+												<img class="cloudzoom" id="zoom1" src="images/sanpham01.jpg" data-cloudzoom="
+												zoomImage: 'images/sanpham01.jpg',
+												zoomSizeMode: 'image',
+												autoInside:750 " alt="Cloud Zoom small image" style="user-select: none;">
 											</div>
 											<div class="pro-img-list">
 												<a href="#">
-													<img src="images/boncau02.jpg" alt="">
+													<img class="cloudzoom-gallery" src="images/sanpham02.jpg" data-cloudzoom="useZoom:'#zoom1', image:'images/sanpham02.jpg' ">
 												</a>
 												<a href="#">
-													<img src="images/boncau03.jpg" alt="">
+													<img class="cloudzoom-gallery" src="images/sanpham03.jpg" data-cloudzoom="useZoom:'#zoom1', image:'images/sanpham03.jpg' ">
 												</a>
 												<a href="#">
-													<img src="images/boncau02.jpg" alt="">
+													<img class="cloudzoom-gallery" src="images/sanpham04.jpg" data-cloudzoom="useZoom:'#zoom1', image:'images/sanpham04.jpg' ">
+
 												</a>
 											</div>
+
 										</div>
 										<div class="col-md-6 col-xs-12">
-											<h4 class="pro-d-title">
-												<a href="#" class="">
-													Leopard Shirt Dress
-												</a>
+											<h4 class="pro-d-title font-weight-bold">
+												BỒN CẦU LOWEN 1 KHỐI LW 801.1U
 											</h4>
-											<p>
-												Praesent ac condimentum felis. Nulla at nisl orci, at dignissim dolor, The best product descriptions address your ideal buyer directly and personally. The best product descriptions address your ideal buyer directly and personally.
-											</p>
+											<ul class="list-inline">
+												<li class="list-inline-item">Thương hiệu: Lowen</li>
+												<li class="list-inline-item">Loại: <a href="#" class="type">Bồn cầu 1 khối</a></li>
+											</ul>
+											<div class="product_price"> 
+												<strong>Giá khuyến mại : </strong> 
+												<span class="pro-price"> 6,295,905 <sup>đ</sup></span>
+												<div>
+													<strong>Giá : </strong> <span class="amount-old"><s>8,994,150,</s><sup>đ</sup></span>  
+												</div>
+											</div>
+
 											<div class="product_meta">
-												<span class="posted_in"> <strong>Categories:</strong> <a rel="tag" href="#">Jackets</a>, <a rel="tag" href="#">Men</a>, <a rel="tag" href="#">Shirts</a>, <a rel="tag" href="#">T-shirt</a>.</span>
-												<span class="tagged_as"><strong>Tags:</strong> <a rel="tag" href="#">mens</a>, <a rel="tag" href="#">womens</a>.</span>
+												<span class="posted_in"> <strong>Mã SP: </strong> LW 801.1U</span>
+												<span class="tagged_as"><strong>Tình trạng: </strong> Còn hàng</span>
 											</div>
-											<div class="m-bot15"> <strong>Price : </strong> <span class="amount-old">$544</span>  <span class="pro-price"> $300.00</span></div>
+											
 											<div class="form-group">
-												<label>Quantity</label>
-												<input type="quantiy" placeholder="1" class="form-control quantity">
+												<label>Số lượng</label>
+												<div class="col-md-11 col-sm-10 col-xs-10 op-box qty-plus-minus d-flex">
+													<button type="button" class="form-control pull-left btn-number btnminus" data-type="minus" data-field="quantity" disabled="disabled">
+														<span class="glyphicon glyphicon-minus"></span>
+													</button>
+													<input id="input-quantity" type="text" name="quantity" value="1" size="2" class="form-control input-number pull-left">
+													<input type="hidden" name="product_id" value="30">
+													<button type="button" class="form-control pull-left btn-number btnplus" data-type="plus" data-field="quantity">
+														<span class="glyphicon glyphicon-plus"></span>
+													</button>
+												</div>
 											</div>
 											<p>
-												<button class="btn btn-round btn-danger" type="button"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+												<button class="btn rounded-0 bg-lowen text-white" type="button"> Thêm vào giỏ hàng</button>
+												<button class="btn rounded-0 btn-danger" type="button"> Mua ngay</button>
 											</p>
 										</div>
 									</div>
@@ -146,13 +171,16 @@
 								<div class="tab-info">
 									<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 										<li class="nav-item">
-											<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+											<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Mô tả sản phẩm</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+											<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Thông số kĩ thuật</a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+											<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Hình ảnh</a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Bình luận</a>
 										</li>
 									</ul>
 								</div>
@@ -227,7 +255,7 @@
 		<section id="product-releated">
 			<div class="container">
 				<h4 class="color-lowen font-weight-bold">SẢN PHẨM LIÊN QUAN</h4>
-					<div class="underline"></div>
+				<div class="underline"></div>
 				<div class="owl-carousel owl-theme owl-product-releated">
 					<div class="item">
 						<div class="product">
@@ -236,8 +264,8 @@
 							<div class="describle text-center">
 								<p class="product-name">BỒN TẮM TOTO</p>
 								<p class="code">PJY1724HPWEN#MW/TVBF412</p>
-								<p class="sale-price">131,509,070 đ</p>
-								<p class="price"><s>131,509,070 đ</s></p>
+								<p class="sale-price">131,509,070 <sup>đ</sup></p>
+								<p class="price"><s>131,509,070 <sup>đ</sup></s></p>
 							</div>
 						</div>
 					</div>
@@ -248,8 +276,8 @@
 							<div class="describle text-center">
 								<p class="product-name">BỒN TẮM TOTO</p>
 								<p class="code">PJY1724HPWEN#MW/TVBF412</p>
-								<p class="sale-price">131,509,070 đ</p>
-								<p class="price"><s>131,509,070 đ</s></p>
+								<p class="sale-price">131,509,070 <sup>đ</sup></p>
+								<p class="price"><s>131,509,070 <sup>đ</sup></s></p>
 							</div>
 						</div>
 					</div>
@@ -260,8 +288,8 @@
 							<div class="describle text-center">
 								<p class="product-name">BỒN TẮM TOTO</p>
 								<p class="code">PJY1724HPWEN#MW/TVBF412</p>
-								<p class="sale-price">131,509,070 đ</p>
-								<p class="price"><s>131,509,070 đ</s></p>
+								<p class="sale-price">131,509,070 <sup>đ</sup></p>
+								<p class="price"><s>131,509,070 <sup>đ</sup></s></p>
 							</div>
 						</div>
 					</div>
@@ -272,8 +300,8 @@
 							<div class="describle text-center">
 								<p class="product-name">BỒN TẮM TOTO</p>
 								<p class="code">PJY1724HPWEN#MW/TVBF412</p>
-								<p class="sale-price">131,509,070 đ</p>
-								<p class="price"><s>131,509,070 đ</s></p>
+								<p class="sale-price">131,509,070 <sup>đ</sup></p>
+								<p class="price"><s>131,509,070 <sup>đ</sup></s></p>
 							</div>
 						</div>
 					</div>
@@ -284,8 +312,8 @@
 							<div class="describle text-center">
 								<p class="product-name">BỒN TẮM TOTO</p>
 								<p class="code">PJY1724HPWEN#MW/TVBF412</p>
-								<p class="sale-price">131,509,070 đ</p>
-								<p class="price"><s>131,509,070 đ</s></p>
+								<p class="sale-price">131,509,070 <sup>đ</sup></p>
+								<p class="price"><s>131,509,070 <sup>đ</sup></s></p>
 							</div>
 						</div>
 					</div>
@@ -296,8 +324,8 @@
 							<div class="describle text-center">
 								<p class="product-name">BỒN TẮM TOTO</p>
 								<p class="code">PJY1724HPWEN#MW/TVBF412</p>
-								<p class="sale-price">131,509,070 đ</p>
-								<p class="price"><s>131,509,070 đ</s></p>
+								<p class="sale-price">131,509,070 <sup>đ</sup></p>
+								<p class="price"><s>131,509,070 <sup>đ</sup></s></p>
 							</div>
 						</div>
 					</div>
@@ -435,8 +463,10 @@
 	</footer>
 
 	<!-- jQuery first, then Popper.js and Bootstrap JS. -->
-	<!-- <script src="js/jquery.min.js" type="text/javascript"></script> -->
-	<script src="js/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
+	<script src="plugins/cloudzoom/js/cloudzoom.js"></script>
+	<script src="plugins/cloudzoom/js/jquery.fancybox.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<!-- owl-carousel -->
