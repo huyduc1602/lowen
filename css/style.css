@@ -487,6 +487,36 @@ h2.title-category>a{
 #footer .list-social>li:hover>a{
     color: #652A29;
 }
+@media(max-width: 1199px){
+  #footer .form-inline .form-control{
+    margin-bottom: 10px;
+  }
+  #footer .form-inline .submit{
+    margin-bottom: 10px;
+  }
+}
+@media(max-width: 767px){
+  #footer .col-md-4{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #footer .box-img{
+    display: block!important;
+    margin: 0 auto;
+  }
+  #footer .form-inline{
+    justify-content: center;
+  }
+  #footer .form-inline .form-control{
+    width: inherit;
+  }
+  #footer .box-pay{
+    justify-content: center;
+  }
+   #footer .list-social{
+    justify-content: center;
+  }
+}
 /* Phần footer */
 
 /* css product detail */
@@ -657,6 +687,12 @@ h2.title-category>a{
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 999;
+}
+@media(max-width: 767px){
+  .icon-bar{
+    display: none;
+  }
 }
 
 .icon-bar a {

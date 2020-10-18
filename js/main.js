@@ -28,7 +28,7 @@ $('.owl-category').owlCarousel({
 	responsiveClass:true,
 	responsive:{
 		0:{
-			items:2,
+			items:1,
 			nav:true
 		},
 		600:{
@@ -46,7 +46,7 @@ $('.owl-category').owlCarousel({
 
 // owl-carousel-bathroom : start
 $('.owl-bathroom').owlCarousel({
-	autoplay: false,
+	autoplay: true,
 	center: true,
 	loop: true,
 	nav: true,
