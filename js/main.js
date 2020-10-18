@@ -24,19 +24,20 @@ function myFunction() {
 $('.owl-category').owlCarousel({
 	loop:true,
 	margin:10,
+	dots:false,
 	responsiveClass:true,
 	responsive:{
 		0:{
 			items:2,
-			nav:false
+			nav:true
 		},
 		600:{
 			items:3,
-			nav:false
+			nav:true
 		},
 		1000:{
 			items:5,
-			nav:true,
+			nav:false,
 			loop:false
 		}
 	}
@@ -45,7 +46,7 @@ $('.owl-category').owlCarousel({
 
 // owl-carousel-bathroom : start
 $('.owl-bathroom').owlCarousel({
-	autoplay: true,
+	autoplay: false,
 	center: true,
 	loop: true,
 	nav: true,
