@@ -65,12 +65,13 @@ $('.owl-product-releated').owlCarousel({
 		},
 		600:{
 			items:3,
-			nav:false
+			nav:false,
+			dots:false
 		},
 		1000:{
 			items:5,
 			nav:true,
-			loop:false
+			dots:false
 		}
 	}
 })
